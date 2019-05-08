@@ -1,0 +1,12 @@
+<ul class="list-group" dnd-sortable-container [sortableData]="coordinateSystems">
+	<li class="list-group-item" *ngFor="let coordOption of coordinateSystems; let i = index" dnd-sortable [sortableIndex]="i">
+
+		<input type="checkbox" name="cbx{{coordOption.displayName}}" id="cbx{{coordOption.displayName}}" class="css-checkbox" [(ngModel)]="coordinateSystems[i].active">
+		<label for="cbx{{coordOption.displayName}}" class="css-label-sortable">
+        Use {{coordOption.displayName}} Coordinates</label>
+		<br /><br />
+		<div class="clear"></div>
+
+
+	</li>
+</ul>
